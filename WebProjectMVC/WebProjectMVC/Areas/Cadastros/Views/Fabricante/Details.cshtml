@@ -1,0 +1,20 @@
+﻿@model WebProjectMVC.Modelo.Cadastros.Fabricante
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Visualizando detalhes de um FABRICANTE";
+}
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        Visualizando detalhes de um FABRICANTE
+    </div>
+    <div class="panel-body">
+        @Html.Partial("~/Areas/Cadastros/Views/Fabricante/_PartialDetailsFabricante.cshtml", Model)
+    </div>
+    <div class="panel-footer panel-info">
+        @Html.ActionLink("Alterar", "Edit", new { id = Model.IdFabricante }, new { @class = "btn btn-info" })
+        @Html.ActionLink("Retornar para a listagem", "Index", null, new { @class = "btn btn-info" })
+    </div>
+    @Html.Partial("~/Areas/Cadastros/Views/Produtos/_PorFabricante.cshtml", Model.Produtos.ToList())
+</div>

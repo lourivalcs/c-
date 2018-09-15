@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="btn-group">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Categorias <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+        <li>@Html.ActionLink("Adicionar", "Create", new { Area = "Tabelas", controller = "Categorias" })</li>
+        <li>@Html.ActionLink("Listar", "Index", new { Area = "Tabelas", controller = "Categorias" })</li>
+    </ul>
+</div>
+
+<div class="btn-group">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Fabricantes <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+        <li>@Html.ActionLink("Adicionar", "Create", new { Area = "Cadastros", controller = "Fabricante" })</li>
+        <li>@Html.ActionLink("Listar", "Index", new { Area = "Cadastros", controller = "Fabricante" })</li>
+    </ul>
+</div>
+
+<div class="btn-group">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Produtos <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+        <li>@Html.ActionLink("Adicionar", "Create", new { Area = "Cadastros", controller = "Produtos" })</li>
+        <li>@Html.ActionLink("Listar", "Index", new { Area = "Cadastros", controller = "Produtos" })</li>
+    </ul>
+</div>
+
+<div class="btn-group">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Segurança <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+        <li>@Html.ActionLink("Adicionar", "Create", new { Area = "Seguranca", controller = "Admin" })</li>
+        <li>@Html.ActionLink("Listar", "Index", new { Area = "Seguranca", controller = "Admin" })</li>
+    </ul>
+</div>
+
+<div class="btn-group">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Papéis <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+        <li>@Html.ActionLink("Adicionar", "Create", new { Area = "Seguranca", controller = "PapelAdmin" })</li>
+        <li>@Html.ActionLink("Listar", "Index", new { Area = "Seguranca", controller = "PapelAdmin" })</li>
+    </ul>
+</div>

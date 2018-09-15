@@ -1,0 +1,10 @@
+/.vs/
+/Modelo/bin/
+/Modelo/obj/
+/packages/
+/Persistencia/bin/
+/Persistencia/obj/
+/Servicos/bin/
+/Servicos/obj/
+/WebProjectMVC/bin/
+/WebProjectMVC/obj/

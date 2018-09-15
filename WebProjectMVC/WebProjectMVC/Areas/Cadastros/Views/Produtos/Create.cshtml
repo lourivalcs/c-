@@ -1,0 +1,41 @@
+﻿@model WebProjectMVC.Modelo.Cadastros.Produto
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Adicionar novo PRODUTO";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            Registro de um NOVO PRODUTO
+        </div>
+        <div class="panel-body">
+            @Html.Partial("~/Areas/Cadastros/Views/Produtos/_PartialEditProduto.cshtml", Model)
+        </div>
+    </div>
+    <div class="panel-footer panel-info">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Adicionar Produto" class="btn btn-danger" />
+            @Html.ActionLink("Listar PRODUTOS", "Index", null, new { @class = "btn btn-warning" })
+        </div>
+        <br />
+        <br />
+    </div>
+
+}
+
+@section ScriptPage {
+    <link rel="stylesheet" href="~/Scripts/jquery-ui-1.12.1.custom/jquery-ui.css" />
+    <script src="~/Scripts/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+    <script src="~/Scripts/jquery-ui-1.12.1.custom/datepicker-pt-BR.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('li').removeClass("active");
+            $('#liProdutos').addClass("active");
+            $("#datepicker").datepicker();
+        });
+    </script>
+}
